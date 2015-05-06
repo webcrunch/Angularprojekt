@@ -1,0 +1,31 @@
+<html ng-app="Papp">
+    <head>
+        <meta charset="utf-8">
+        <title>persons</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js">
+        </script>
+        <script src="js/directory.js"></script>
+    </head>
+    <body ng-controller="Papp">
+    <div class="leftbox">
+  <ul ng-repeat="person in peeps | orderBy: 'name' " >
+            <li>{{person.name}} </li>
+            <li>{{person.phone}}</li>
+            <li>{{person.ID}}</li>
+            <li>{{person.email}}</li>
+        </ul>
+        </div>
+        <div class="rightbox" ng-controller="MysqlPapp">
+        <div ng-repeat="person in persons | orderBy: 'Name' ">
+            <p>Identifikation Number: {{person.id}} </p>
+            <p>First Name: {{person.Name}}</p>
+            <p>Street: {{person.Street}}</p>
+            <p>Country:{{person.Country}}</p>
+            <p>City: {{person.City}}</p>
+            <p>Job: {{person.Job}}</p>
+            <p>Salery: {{person.Payed}}</p>
+            <br />
+        </div>
+    </body>
+</html>

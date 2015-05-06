@@ -1,0 +1,75 @@
+@import url(/oldies/reset.css);
+@import url(/dv/fonts.css);
+body
+{
+    background-color: #ededed;
+}
+
+.center
+{
+    font-family: 'ff-din-web-condensed';
+
+    width: 800px;
+    margin-right: auto ;
+    margin-left: auto ;
+    padding: .5%;
+
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.footer{
+
+}
+
+.menu { 
+  width: 200px; 
+  position: fixed; 
+  margin-left: 631px; 
+}
+.center_text{
+    text-align: center;
+    font-family: 'ff-din-web-condensed';
+}
+.update
+{
+    max-width: 77px;
+    margin: 4% 0 2% 0;
+}
+
+.visible1-false
+{
+    visibility: hidden;
+}
+.visible2-false
+{
+    visibility: hidden;
+}
+.left
+{
+    float: left;
+}
+
+.right
+{
+
+    float:left;
+}
+.tiny
+{
+    color:blue;
+}
+
+
+.clear
+{
+    clear: both;
+}
+
+
+p
+{
+    margin: 4px;
+    padding: 5px;
+}
+

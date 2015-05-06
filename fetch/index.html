@@ -1,0 +1,88 @@
+<!doctype html>
+<html data-ng-app="Papp">
+    <head>
+        <meta charset="utf-8">
+        <title>persons</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
+        </script>
+        <!--<script src="angular.min.js">
+        </script>-->
+        <script src="https://code.angularjs.org/1.2.26/angular-route.js">
+        </script>
+        <script src="js/directory.js"></script>
+        <link rel="stylesheet" href="css/struktur.css">
+    </head>
+    <body>
+    <div class="center">
+
+   <div data-ng-controller="insertSQL">
+   <div class="menu">
+    <input class="update" id="Fname" data-ng-model="name" placeholder="Add Name">
+    <input class="update" id="Street" data-ng-model="street" placeholder="Add Street">
+    <input class="update" id="Country" data-ng-model="land" placeholder="Add Country">
+    <input class="update" id="City" data-ng-model="city" placeholder="Add City">
+    <input class="update" id="Job" data-ng-model="job" placeholder="Add Job">
+    <input class="update" id="Salery" data-ng-model="payment" placeholder="Add Salery">
+    <button data-ng-click="addPerson()" name="add" type="Submit" >Add</button>
+    <a href="#">upp</a>
+    <a href="#">ned</a>
+    <!--, street, land, city, job, payment-->
+    </div>
+    <div class="left">
+    <input data-ng-model="searchText">
+
+        <div data-ng-controller="fetchCtrl">
+
+        <button data-ng-click="switch1()">Toggle JSON</button>
+
+        <div data-ng-repeat="person in peeps | filter:searchText |  orderBy: 'ID' "  class="visible1-{{falsify_}}">
+            <p class="tiny">{{person.ID}}.<br />
+           <!-- <a href="#">-->{{person.name}}</a><br /></p>
+            <p class="underline">Phone:<br /> {{person.phone}}<br />
+            Email:<br /><a href="#"> {{person.email}}</a></p>
+        </div>
+        </div>
+
+
+
+        </div>
+        </div>
+     <div class="right">
+     <input data-ng-model="searchNewText">
+        <div data-ng-controller="fetchSQL">
+        <button data-ng-click="switch2()">Toggle SQL</button>
+        <div data-ng-repeat="person in persons | filter:searchNewText | filter: orderBy: 'ID'" class="visible1-{{falsifyF}}" >
+            <p class="tiny">{{person.id}}.<br />
+            <!--<a href="#">-->{{person.Names}}</a><br /></p>
+            <p>Country:<br /> {{person.Country}}<br />
+            City:<br /> {{person.City}}<br />
+            Company:<br /> {{person.Company}}<br />
+            Email:<br /> <a href="#">{{person.Email}}</a><br />
+            Salery:<br /> {{person.Salery | currency}}<br />
+            Account to send Salery:<br /> {{person.Saccount}}</p>
+        </div>
+
+        </div>
+        </div>
+
+        <div class="clear">
+            
+        </div>
+        <div class="<footer>">
+            <p class="center_text"> Werbcrunch.se - Den du kan lita på att den fungerar.  </p>
+        </div>
+        </footer>
+        </div>
+    </body>
+</html>
+
+
+<!--
+<p>Identifikation Number:<br /><b>{{person.id}}</b><br />
+            <u>First Name:</u><br /> {{person.Name}}<br />
+            Street:<br /> {{person.Street}}<br />
+            Country:<br /> {{person.Country}}<br />
+            City:<br /> {{person.City}}<br />
+            Job:<br /> {{person.Job}}<br />
+            Salery:<br /> {{person.Payed }}</p>
+             Email:<br /><a href="#"> {{person.Email}}</a></p>-->

@@ -1,0 +1,21 @@
+<!doctype html>
+<html data-ng-app="mysql_Papp">
+    <head>
+        <meta charset="utf-8">
+        <title>persons</title>
+        <script src="angular.min.js"></script>
+        <script src="js/directory.js"></script>
+    </head>
+    <body data-ng-controller="MysqlPapp"  >
+        <div data-ng-repeat="person in persons | orderBy: 'Name' ">
+            <p>Identifikation Number: {{person.id}} </p>
+            <p>First Name: {{person.Name}}</p>
+            <p>Street: {{person.Street}}</p>
+            <p>Country:{{person.Country}}</p>
+            <p>City: {{person.City}}</p>
+            <p>Job: {{person.Job}}</p>
+            <p>Salery: {{person.Payed}}</p>
+            <br />
+        </div>
+    </body>
+</html>
