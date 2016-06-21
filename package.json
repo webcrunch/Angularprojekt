@@ -1,0 +1,37 @@
+{
+  "name": "angularprojekt",
+  "version": "1.0.0",
+  "description": "multi data retriving and frontend implementation",
+  "main": "server.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webcrunch/angularprojekt.git"
+  },
+  "keywords": [
+    "mongodb",
+    "mySQL",
+    "json",
+    "fs",
+    "rs",
+    "file"
+  ],
+  "author": "Jarl Holmberg Lindquist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webcrunch/angularprojekt/issues"
+  },
+  "homepage": "https://github.com/webcrunch/angularprojekt#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.5.1",
+    "mysql": "^2.11.1",
+    "node": "0.0.0",
+    "nodemon": "^1.9.2"
+  }
+}
